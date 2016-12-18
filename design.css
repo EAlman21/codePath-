@@ -1,0 +1,26 @@
+body{
+  background-color: #b7d1c4;
+}
+
+h2{
+  text-align: center;
+}
+
+section{
+  background-color: white;
+  width: 20%;
+  margin-left: 40%;
+  margin-top:20%;
+  border-style: solid;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+#button{
+  margin-left: 35%;
+}
+.error{
+  border-color: red;
+}
+.success{
+  border-color: green;
+}
