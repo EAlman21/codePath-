@@ -20,24 +20,20 @@
                 <label style="text-align:center"class="mdl-textfield__label "for="bill">Bill Subtotal</label>
     					</div>
               <p style="text-align:center">Tip Percentage</p>
-              <div style="margin-left:20%">
-                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1" checked>
-                  <span class="mdl-radio__label">10% </span>
-                </label>
-                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
-                  <span class="mdl-radio__label">15% </span>
-                </label>
-                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-                  <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
-                  <span class="mdl-radio__label">20%</span>
-                </label>
+              <div style="margin-left:23%">
+                <?php
+                  for ($i=10; $i <=20 ; $i = $i + 5) {
+                    echo "<label class=mdl-radio mdl-js-radio mdl-js-ripple-effect for=option-1>
+                           <input type=radio id=option-1 class=mdl-radio__button name=options value=.$i>
+                           <span class=mdl-radio__label>$i%</span>
+                          </label>";
+                  }
+                 ?>
               </div>
     				</form>
     			</div>
     			<div class="mdl-card__actions mdl-card--border">
-    				<button style="margin-left:35%"class="mdl-button mdl-button--colored mdl-js-button
+    				<button type="submit" style="margin-left:35%"class="mdl-button mdl-button--colored mdl-js-button
              mdl-js-ripple-effect">Submit</button>
     			</div>
     		</div>
