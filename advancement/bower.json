@@ -1,0 +1,20 @@
+{
+  "name": "advancement",
+  "homepage": "https://github.com/EAlman21/codePath-",
+  "description": "creating a tip calculator with better UI",
+  "main": "",
+  "authors": [
+    "Enmanuel Almanzar"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-lite": "^1.2.1"
+  }
+}
