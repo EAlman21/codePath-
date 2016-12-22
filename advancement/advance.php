@@ -11,8 +11,7 @@
       $Bill = $_POST['bill'];
       $Tip = $_POST['tip'];
       $number_error = !is_numeric ($Bill) || $Bill < "10";
-      $tip_error = $Tip == NULL; //must finish this part
-      $clean = $Bill == NULL && $tip == NULL; // must finish this part
+      $tip_error = $Tip == NULL;
       ?>
       <div class="mdl-layout mdl-js-layout">
     	<main class="mdl-layout__content">
@@ -32,7 +31,7 @@
                   for ($i=10; $i <=20 ; $i = $i+5) {
                     echo "
                     <label class=mdl-radio mdl-js-radio mdl-js-ripple-effect for=option-1>
-                      <input type=radio id=option-1 class=mdl-radio__button name=tip value=$i>
+                      <input type=radio id=option-1 class=mdl-radio__button name=tip value=.$i>
                       <span class=mdl-radio__label>$i% </span>
                     </label>";
                   }
@@ -59,5 +58,5 @@
     	</main>
     </div>
   </body>
-  <source src="bower_components/material-design-lite/material.min.js" >
+  <script src="bower_components/material-design-lite/material.min.js"></script>
 </html>
