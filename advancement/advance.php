@@ -6,15 +6,15 @@
     <link rel="stylesheet" href="bower_components/material-design-lite/material.min.css">
     <title>Tip Calculator</title>
   </head>
-  <body>
+  <body class="mdl-color--grey-100">
     <?php
       $Bill = $_POST['bill'];
       $Tip = $_POST['tip'];
       $number_error = !is_numeric ($Bill) || $Bill < "10";
-      $tip_error = $Tip == NULL;
-      $clean = $Bill == NULL && $tip == NULL;
+      $tip_error = $Tip == NULL; //must finish this part
+      $clean = $Bill == NULL && $tip == NULL; // must finish this part
       ?>
-      <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+      <div class="mdl-layout mdl-js-layout">
     	<main class="mdl-layout__content">
     		<div class="mdl-card mdl-shadow--6dp">
     			<div class="mdl-card__title mdl-color--primary mdl-color-text--white">
@@ -47,9 +47,10 @@
     		</div>
         <?php
           if($number_error){
-            echo '<p>Must enter a number Greater than 10</p>';
+            echo '<p style=color:red>Must enter a number Greater than 10</p>';
           }elseif($tip_error){
-            echo '<p>Must select a tip percentage</p>';
+            //must finish this part
+            echo '<p style=color:red>Must select a tip percentage</p>';
           }else{
             echo "<p style=text-align:center>Tip is $" .money_format('%i', $Bill * $Tip). "</p>" ;
             echo "<p style=text-align:center>Total Cost is $".money_format('%i', $Bill + ($Bill * $Tip)). "</p>";
